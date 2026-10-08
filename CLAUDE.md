@@ -1,48 +1,121 @@
-# Obsidian Software Engineering Knowledge Base
+# Obsidian Engineering Knowledge Vault
 
-This repository is an Obsidian knowledge base.
+This repository is my Software Engineering knowledge vault.
 
-The primary knowledge area is:
+It stores knowledge from both my work and my personal projects. Each note
+records which one it comes from in its `origin` property (see
+"Work and personal origin").
 
-Software Engineering/
+## Purpose
 
-Read `Software Engineering/README.md` before modifying notes in that area.
+The purpose of this vault is to capture durable engineering knowledge,
+including:
+
+- Technical concepts
+- Tools and libraries
+- Programming languages and frameworks
+- Engineering patterns
+- Development workflows
+- AI skills, agents, and workflows
+- Engineering decisions
+- Lessons learned
+- Problems and solutions
+
+The goal is useful knowledge, not maximum note count.
 
 ## Core principle
 
 Capture first, organize later.
 
-New knowledge starts in:
+## Vault structure
 
-Software Engineering/Inbox/
+Knowledge lives under:
 
-Do not bypass the Inbox when creating new knowledge notes.
+`Software Engineering/`
 
-## Folder meanings
+Read `Software Engineering/README.md` before modifying notes in that area.
 
-The Software Engineering folders have distinct purposes:
+Current categories:
 
 - `Inbox/`
-  - Unprocessed or developing ideas.
-  - Notes can be rough, incomplete, duplicated, or exploratory.
-  - A note may remain here indefinitely.
-
 - `Engineering/`
-  - Explains how something works.
-  - Contains durable technical knowledge and explanations.
-
 - `Patterns/`
-  - Documents reusable solutions, practices, or approaches.
-  - A pattern should be applicable to more than one specific situation.
-
 - `Decisions/`
-  - Records a choice that was made and the reasoning behind it.
-  - A decision should explain the context, alternatives, and rationale.
 
-Do not create additional top-level folders under `Software Engineering/`
-unless the user explicitly asks for them.
+Do not create additional top-level knowledge folders automatically. Only create
+one under `Software Engineering/` when the user explicitly asks for it.
 
-## Existing notes first
+## Classification
+
+### Inbox
+
+Unprocessed, incomplete, or developing knowledge.
+
+- Notes can be rough, incomplete, duplicated, or exploratory.
+- A note may remain here indefinitely.
+
+### Engineering
+
+How something works.
+
+- Contains durable technical knowledge and explanations.
+
+### Patterns
+
+Reusable solutions, techniques, or workflows.
+
+- A pattern should be applicable to more than one specific situation.
+
+### Decisions
+
+Important choices and the reasoning behind them.
+
+- A decision should explain the context, alternatives, and rationale.
+
+### Choosing a category
+
+Use these questions:
+
+Engineering:
+"How does this work?"
+
+Patterns:
+"This is a solution I can reuse."
+
+Decisions:
+"I chose X instead of Y because..."
+
+If none of these clearly applies, keep the note in `Inbox/`.
+
+Do not force a classification.
+
+## Important distinction
+
+Claude Code configuration and Obsidian knowledge are different things.
+
+Claude Code configuration lives under:
+
+`.claude/`
+
+This includes:
+
+- Agents
+- Skills
+- Commands
+- Hooks
+
+These files define how Claude operates.
+
+`Software Engineering/` contains the knowledge itself.
+
+Do not treat `.claude/` configuration files as knowledge notes unless they are
+being explicitly documented as engineering knowledge.
+
+## Note creation
+
+New or immature knowledge should normally begin in:
+
+`Software Engineering/Inbox/`
 
 Before creating a note:
 
@@ -51,11 +124,17 @@ Before creating a note:
 3. Prefer updating or linking to an existing note over creating a duplicate.
 4. Do not create multiple notes merely because they have slightly different titles.
 
-Use Obsidian wikilinks when a meaningful relationship exists:
+Avoid duplicate notes.
 
-[[Note Name]]
+## Links
 
-Do not add links merely to increase the number of links.
+Use meaningful Obsidian wikilinks:
+
+`[[Note Name]]`
+
+Only create links when the relationship is useful.
+
+Do not add links merely for the sake of linking notes.
 
 ## Note writing
 
@@ -72,6 +151,39 @@ Do not add unnecessary sections.
 Do not rewrite a note merely for stylistic preference.
 
 Preserve useful technical details when cleaning up a note.
+
+## Work and personal origin
+
+Notes are written as general engineering knowledge. Where the knowledge came
+from is recorded as metadata, not used to scope or split the note.
+
+Every knowledge note records where it came from in an `origin` list property:
+
+    ---
+    origin:
+      - work
+    ---
+
+- `work` — learned at work.
+- `personal` — learned on my own projects.
+- both values — drawn from both.
+
+`origin` records where the knowledge came from, not where it can be used.
+Knowledge learned at work that is useful anywhere is still tagged `work` only.
+
+When creating or organizing notes:
+
+- Set `origin` on every new note. Always use the list form, even for one value.
+- If the origin is not clear from the request, ask instead of guessing.
+- A different origin alone is not a reason to create a separate note.
+- My company has its own standards for how code is written. Only when the
+  content itself differs between work and personal (a company standard versus
+  my own approach), keep two separate notes named with a `(work)` /
+  `(personal)` suffix, and link each to its counterpart.
+- Do not merge a work note with a personal note, and do not copy company
+  standards into a personal note.
+- Separation is by property, not by folder. Do not create `Work/` or `Personal/`
+  folders.
 
 ## Graduation
 
@@ -94,26 +206,23 @@ When graduating an Inbox note:
 
 A note does not need to be perfect before graduation.
 
-## Classification
+## Mutations
 
-Use these questions:
+Do not silently perform substantial changes.
 
-Engineering:
-"How does this work?"
+Do not silently move, delete, merge, or substantially rewrite notes.
 
-Patterns:
-"This is a solution I can reuse."
+Before:
 
-Decisions:
-"I chose X instead of Y because..."
+- Deleting notes
+- Merging notes
+- Renaming many notes
+- Moving many notes
+- Creating new top-level folders
+- Rewriting unrelated notes
+- Graduating notes
 
-If none of these clearly applies, keep the note in `Inbox/`.
-
-Do not force a classification.
-
-## Mutations and approval
-
-Before modifying the knowledge base as part of an organization operation:
+show the proposed changes and wait for approval:
 
 1. Inspect the relevant notes.
 2. Produce a proposed change list.
@@ -126,7 +235,8 @@ Before modifying the knowledge base as part of an organization operation:
 4. Wait for explicit user approval.
 5. Only then perform the changes.
 
-Do not silently move, delete, merge, or substantially rewrite notes.
+Rewriting and cleaning up a note is allowed when it is part of an approved
+knowledge improvement or graduation.
 
 ## Deletion
 
@@ -142,6 +252,27 @@ If two notes contain overlapping information:
 
 These rules apply to:
 
-Software Engineering/
+`Software Engineering/`
 
 Do not modify unrelated areas of the Obsidian vault unless explicitly instructed.
+
+Do not modify files outside this vault unless explicitly instructed.
+
+## Quality
+
+Prefer:
+
+- Clear concepts
+- Durable knowledge
+- Meaningful connections
+- Explicit reasoning
+- Reusable patterns
+- Small, understandable notes
+
+Avoid:
+
+- Duplicate information
+- Artificial categorization
+- Excessive linking
+- Premature organization
+- Overly complex note structures
