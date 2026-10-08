@@ -12,6 +12,9 @@ Tools and libraries I use with my [[programming stack]].
 
 - Git
 - Claude Code
+- opencode
+
+How Claude Code, opencode, and the MCP servers, plugins, and skills around them are installed is in [[ai tooling setup]].
 
 ## Libraries
 

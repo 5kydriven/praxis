@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "SubagentStop": [
+      {
+        "matcher": "^knowledge-assistant$",
+        "hooks": [
+          {
+            "type": "agent",
+            "prompt": "The knowledge-assistant has finished. Now act as the note-organizer. Review the knowledge produced by the knowledge-assistant, inspect the Software Engineering vault, identify the appropriate existing notes or new notes, meaningful connections, and possible graduation from Inbox. Do not make substantial mutations without presenting a proposal and receiving explicit user approval."
+          }
+        ]
+      }
+    ]
+  }
+}

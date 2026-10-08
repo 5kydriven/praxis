@@ -11,10 +11,14 @@
             "id": "c285638d0a5a4d98",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Software Engineering/Patterns/flutter architecture (work).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "flutter architecture (work)"
             }
           }
         ]
@@ -183,6 +187,10 @@
   },
   "active": "c285638d0a5a4d98",
   "lastOpenFiles": [
+    "Software Engineering/Inbox/ai tooling setup.md",
+    "Software Engineering/Engineering/tools & libraries.md",
+    "Software Engineering/Engineering/programming stack.md",
+    "Software Engineering/Inbox/ai tooling setup.md.tmp.14036.a692a5ce11ea",
     "Software Engineering/Inbox/flutter architecture (personal).md",
     "Software Engineering/Inbox/flutter architecture (work).md",
     "Software Engineering/Patterns/flutter architecture (work).md",
@@ -201,12 +209,9 @@
     "CLAUDE.md",
     "CLAUDE.md.tmp.14036.d77ca128a4f6",
     "Software Engineering/README.md.tmp.14036.45a2ecd6fd24",
-    "CLAUDE.md.tmp.14036.62f04daf866a",
     "Software Engineering/README.md",
     "Note Name.md",
-    "Software Engineering/Engineering/programming stack.md",
     "Software Engineering/Inbox/tools & libraries.md",
-    "Software Engineering/Engineering/tools & libraries.md",
     "Software Engineering/Inbox/programming stack.md",
     "Software Engineering/Programming Stack/Languages/Dart.md",
     "Software Engineering/Programming Stack/Languages/Python.md",
@@ -217,7 +222,6 @@
     "Software Engineering/Programming Stack/Frameworks/Next.js.md",
     "Software Engineering/Programming Stack/Frameworks/Nuxt & Vue.md",
     "Welcome.md",
-    "_claude_mcp_probe.md",
-    "_claude_access_probe.md"
+    "_claude_mcp_probe.md"
   ]
 }
